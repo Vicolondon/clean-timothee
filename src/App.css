@@ -1,0 +1,171 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 120px;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    /*animation: App-logo-spin infinite 20s linear;*/
+  -webkit-transition: -webkit-transform .5s linear; 
+  transition: .5s linear;
+  }
+}
+button, input, h1, h2, p, a{
+  -moz-user-select: none; /* Firefox */
+  -webkit-user-select: none; /* Chrome, Safari, Opéra depuis la version 15 */
+  -ms-user-select: none; /* Internet explorer depuis la version 10 et Edge */
+  user-select: none; /* Propriété standard */
+}
+.buttons{
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.buttons, .App-logo{
+  -webkit-transition: -webkit-transform .5s linear; 
+  transition: .5s linear;
+}
+.shown{
+  opacity: 1;
+}
+.login-button{
+  width: 150px;
+  text-align: center;
+  padding: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid black;
+  background: #ffffff;
+  margin-top: 10px;
+}
+
+/*
+Custom SHoes
+*/
+.custom{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+#customshoes{
+  margin: 0 auto;
+  height: 760px;
+  width: 100vw;
+  position: relative;
+}
+canvas{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+/*
+Launch
+*/
+.launch{
+  z-index: 200;
+    background: greenyellow;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    background-position: center;
+    padding: 0;
+    border: none;
+    line-height: 26px;
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    height: 80%;
+    opacity: 1;
+}
+
+/*
+Swipe
+*/
+
+.swipe {
+  margin: 0 auto;
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 1;
+  height: 100px;
+  width: 500px;
+  bottom: 0;
+  z-index: 2;
+}
+.swipe-wrap, .swipe-wrap-2 {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+.swipe-wrap{
+    z-index: 5;
+}
+.swipe-wrap > div, .swipe-wrap-2 > div {
+  float: left;
+  width: 100%;
+  height: 90%;
+  position: relative;
+  overflow: hidden;
+}
+.swipe-element{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.swipe-element>img{
+  width: 20%;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.App-header {
+  /*
+  background-color: #282c34;
+  */
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+#colorYellow, #colorRed, #colorWhite, #colorGreen, #colorBlue, #colorBlack{
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    z-index: 2;
+}
+#colorInterface{
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    overflow: hidden;
+    position: absolute;
+    opacity: 1;
+    bottom: 0px;
+    width: 500px;
+    height: 100px;
+    z-index: 16;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
